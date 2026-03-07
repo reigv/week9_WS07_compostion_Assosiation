@@ -21,3 +21,22 @@ void CourseID::display() const {
     std::cout << "Course Code: " << code << std::endl;   
 }
 
+Course::Course(std::string _code, std::string _name, Student* _student, int _num_stu): 
+course_id_(_code, _name), num_students(_num_stu) {
+    for (int i = 0; i < SIZE; i++)
+    {
+        students_[i] = _student;
+    }
+    
+}
+
+void Course::display() const {
+    course_id_.display();
+    // students_.display();
+    // std::cout << "Number of Students: " << num_students << std::endl;
+}
+
+void Course::display_students() const{
+    students_.display();
+}
+

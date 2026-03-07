@@ -51,13 +51,24 @@ class Course
 {
 private:
     CourseID course_id_;
-    Student* students_
+    Student* students_[SIZE];
+    int num_students;
+
+public:
+    Course(std::string _code, std::string _name, Student* _student, int _num_stu);
+    void display() const;
+    void display_students() const;
 
 };
 
 class Student 
 {
 private: 
+    StudentID studentid;
+    Course* courses[SIZE];
+    int num_courses;
+
+public:
 
 };
 
